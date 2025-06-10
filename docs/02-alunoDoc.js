@@ -32,13 +32,41 @@ export default {
                     "content": {
                         "application/json": {
                             "schema": {
-                                "type": "object",
-                                "properties": {
+                                "type": "object",                                "properties": {
+                                    "data": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer"
+                                                },
+                                                "nome": {
+                                                    "type": "string"
+                                                },
+                                                "materias": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "integer"
+                                                            },
+                                                            "nome": {
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
                                     "limit": {
                                         "type": "integer"
                                     },
                                     "next": {
-                                        "type": ["integer", "null"]
+                                        "type": ["integer", "null"],
+                                        "description": "Offset para a próxima página, null se não houver mais registros"
                                     }
                                 }
                             }

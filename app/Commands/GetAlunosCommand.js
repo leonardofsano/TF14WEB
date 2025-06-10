@@ -21,9 +21,8 @@ export default {
 
         /**
          * URLSearchParams é usado para gerenciar o request body dados no formato x-www-form-urlencoded.
-         */
-        const data = new URLSearchParams();
-        data.append('email', 'user1@example.com');
+         */        const data = new URLSearchParams();
+        data.append('email', 'admin@admin.com');
         data.append('senha', '123456');
 
         try {
